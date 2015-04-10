@@ -5,6 +5,7 @@ double postfixToAnswer(string s)
 {
 	BinaryOperand binops;
 	UnaryOperand unops;
+	Constant constant(0);
 	istringstream iss(s);
 	stack<double> container;
 
@@ -22,7 +23,11 @@ double postfixToAnswer(string s)
 		}
 		else
 		{
-			if (binops.binops.find(word)!=binops.binops.end())
+			if (constant.constant.find(word) != constant.constant.end())
+			{
+				container.push(constant[word]);
+			}
+			else if (binops.binops.find(word)!=binops.binops.end())
 			{ 
 				double a = container.top();
 				container.pop();

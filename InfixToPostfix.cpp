@@ -4,12 +4,11 @@
 string infixToPostfix(string s)
 {
 	stack<string> charContainer;
-	
 	string postfixString;
 	
 	s = "(" + s + ")";
-
 	handleNegativeAndPositiveSymbol(s);
+	Constant constant(0);
 
 	for (auto iter = s.begin(); iter != s.end();)
 	{
@@ -34,8 +33,15 @@ string infixToPostfix(string s)
 			string stringTmp;
 			for (; iter != s.end() && isalpha(*iter); iter++)
 				stringTmp += *iter;
-			charContainer.push(stringTmp);
-			if (iter == s.end())break;
+			if (constant.constant.find(stringTmp) != constant.constant.end())
+			{
+				postfixString += stringTmp + ' ';
+			}
+			else
+			{
+				charContainer.push(stringTmp);
+			}
+				if (iter == s.end())break;
 		}
 		else
 		{
@@ -103,7 +109,9 @@ int stringToInt(std::string s)
 
 int typePriority(std::string c)
 {
-	if (c == "+" || c == "-")
+	if (c == "^")
+		return 4;
+	else if (c == "+" || c == "-")
 		return 2;
 	else if (c == "*" || c == "/")
 		return 3;

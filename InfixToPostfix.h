@@ -1,5 +1,6 @@
 #include <string>
 #include <stack>
+#include "BinaryOperand.h"
 using namespace std;
 
 string infixToPostfix(string s);

@@ -24,3 +24,15 @@ public:
 	~UnaryOperand();
 	map<string, function<double(double)>> unops;
 };
+
+class Constant
+{
+public:
+	double operator[](string s){ return constant.at(s); };
+	Constant(double x);
+	~Constant();
+	map<string, double> constant;
+	void updateX(double x);
+private:
+	double x;
+};
