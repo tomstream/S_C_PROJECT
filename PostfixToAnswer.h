@@ -5,4 +5,4 @@
 #include<stack>
 #include "BinaryOperand.h"
 
-double postfixToAnswer(string s);
+double postfixToAnswer(string s,double x=0);

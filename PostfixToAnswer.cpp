@@ -1,11 +1,11 @@
 #include "PostfixToAnswer.h"
 
 
-double postfixToAnswer(string s)
+double postfixToAnswer(string s,double x)
 {
 	BinaryOperand binops;
 	UnaryOperand unops;
-	Constant constant(0);
+	Constant constant(x);
 	istringstream iss(s);
 	stack<double> container;
 

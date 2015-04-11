@@ -53,6 +53,7 @@ Constant::Constant(double x)
 {
 	constant["x"] = x;
 	constant["PI"] = 3.1415926535898;
+	constant["e"] = 2.718281828459;
 }
 Constant::~Constant()
 {

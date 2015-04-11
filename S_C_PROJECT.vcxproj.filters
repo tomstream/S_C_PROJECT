@@ -27,6 +27,9 @@
     <ClCompile Include="PostfixToAnswer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Dichotomy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InfixToPostfix.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="PostfixToAnswer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dichotomy.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

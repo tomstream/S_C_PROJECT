@@ -65,11 +65,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BinaryOperand.h" />
+    <ClInclude Include="Dichotomy.h" />
     <ClInclude Include="InfixToPostfix.h" />
     <ClInclude Include="PostfixToAnswer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryOperand.cpp" />
+    <ClCompile Include="Dichotomy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="InfixToPostfix.cpp" />
     <ClCompile Include="PostfixToAnswer.cpp" />
